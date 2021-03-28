@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script type="text/javascript"> // ВНИМАНИЕ!!! Данный код берет trackId из урла и перенапрвляет на интеграцию для мобильного или дестопного ленда
+        var trackId = location.href.split('/1/').pop(); // Если вы будете использовать данный ленд на другом домене, то запишите последние символы пути
+        if(screen.width <= 1300){ // к вашему ленду в метод split(), это необходимо для передачи параметров. При измении интеграции менять 2 файла!
+            location.href = 'mobile.php' + trackId;
+        } else {
+            location.href='desktop.php' + trackId;
+        }
+      </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,438 @@
+@charset 'UTF-8';
+
+/****************************** slick.css starts here **************************************/
+/* Slider */
+.slick-slider
+{
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    width:600px;
+    margin:0 auto;
+
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+        touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list
+{
+    position: relative;
+    display: block;
+    overflow: hidden;
+
+    margin: 0;
+    padding: 0;
+}
+.slick-list:focus
+{
+    outline: none;
+    border:none;
+}
+.slick-list.dragging
+{
+    cursor: pointer;
+    cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list
+{
+    -webkit-transform: translate3d(0, 0, 0);
+       -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+         -o-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
+
+.slick-track
+{
+    position: relative;
+    top: 0;
+    left: 0;
+
+    display: block;
+}
+.slick-track:before,
+.slick-track:after
+{
+    display: table;
+
+    content: '';
+}
+.slick-track:after
+{
+    clear: both;
+}
+.slick-loading .slick-track
+{
+    visibility: hidden;
+}
+
+.slick-slide
+{
+    display: none;
+    float: left;
+    height: 100%;
+    min-height: 1px;
+}
+[dir='rtl'] .slick-slide
+{
+    float: right;
+}
+.slick-slide img
+{
+    display: block;
+}
+.slick-slide.slick-loading img
+{
+    display: none;
+}
+.slick-slide.dragging img
+{
+    pointer-events: none;
+}
+.slick-initialized .slick-slide
+{
+    display: block;
+}
+.slick-loading .slick-slide
+{
+    visibility: hidden;
+}
+.slick-vertical .slick-slide
+{
+    display: block;
+
+    height: auto;
+
+    border: 1px solid transparent;
+}
+.slick-arrow.slick-hidden {
+    display: block;
+}
+
+/****************************** slick.css ends here **************************************/
+
+
+
+/* Slider */
+.slick-loading .slick-list
+{
+    background: #fff url('../img/ajax-loader.gif') center center no-repeat;
+}
+
+/* Icons */
+@font-face
+{
+    font-family: 'slick';
+    font-weight: normal;
+    font-style: normal;
+
+    src: url('../fonts/slick.eot');
+    src: url('../fonts/slick.eot#iefix') format('embedded-opentype'), url('../fonts/slick.woff') format('woff'), url('../fonts/slick.ttf') format('truetype'), url('../img/slick.svg#slick') format('svg');
+}
+/* Arrows */
+.slick-prev, .slick-next{
+    position: absolute;
+    top:14%;
+    display: block;
+    width:35px;
+    height:51px;
+    padding: 0;
+    margin-top: 0px;
+	outline:none;
+	border:none;
+	z-index:9;
+	cursor:pointer;
+	}
+
+.slick-prev, .slick-prev:hover{
+    left:-2%;
+	background:url(../img/prev.png) no-repeat left center;
+  background-color: transparent; 
+	}
+.slick-next, .slick-next:hover{
+    right:-2%;
+	background:url(../img/next.png) no-repeat left center;
+  background-color: transparent; 
+	}
+
+/* Dots */
+.slick-slider{}
+
+
+
+
+/*************************************animate.css starts here *********************************************/
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.animated.infinite {
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+.animated.hinge {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+}
+
+.animated.bounceIn,
+.animated.bounceOut {
+  -webkit-animation-duration: .75s;
+  animation-duration: .75s;
+}
+
+.animated.flipOutX,
+.animated.flipOutY {
+  -webkit-animation-duration: .75s;
+  animation-duration: .75s;
+}
+
+.zoomIn {
+  -webkit-animation-name: zoomIn;
+  animation-name: zoomIn;  
+ 
+  animation-duration: 1s;   
+  -webkit-animation-duration: 1s;
+
+  animation-timing-function: ease;  
+  -webkit-animation-timing-function: ease;  
+
+  visibility: visible !important;   
+}
+@-webkit-keyframes zoomIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(.3, .3, .3);
+    transform: scale3d(.3, .3, .3);
+  }
+
+  50% {
+    opacity: 1;
+  }  
+  
+}
+
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(.3, .3, .3);
+    transform: scale3d(.3, .3, .3);
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+/* ----------------------- */
+.slideInUp {
+  -webkit-animation-name: slideInUp;
+  animation-name: slideInUp;
+  
+  animation-duration: .5s;  
+  -webkit-animation-duration: .5s;
+
+  animation-timing-function: ease;  
+  -webkit-animation-timing-function: ease;  
+
+  visibility: visible !important;           
+}
+
+@keyframes slideInUp {
+  0% {
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+    visibility: visible;
+  }
+
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@-webkit-keyframes slideInUp {
+  0% {
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+    visibility: visible;
+  }
+
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+/* ----------------------- */
+
+ul.top-list li.list4{
+animation: fadein .5s;
+    -moz-animation: fadein .5s; 
+    -webkit-animation: fadein .5s; 
+    -o-animation: fadein .5s;
+}
+ul.top-list li.list4{
+    animation: fadein 3.5s;
+    -moz-animation: fadein 3.5s; 
+    -webkit-animation: fadein 3.5s;
+    -o-animation: fadein 3.5s;
+}
+ul.top-list li.list4{
+    animation: fadein 6.5s;
+    -moz-animation: fadein 6.5s;
+    -webkit-animation: fadein 6.5s;
+    -o-animation: fadein 6.5s;
+    }
+ul.top-list li.list4{
+    animation: fadein 6.5s;
+    -moz-animation: fadein 6.5s;
+    -webkit-animation: fadein 6.5s;
+    -o-animation: fadein 6.5s;
+}
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+/*-------------------- */
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+  
+  animation-duration: .5s;  
+  -webkit-animation-duration: .5s;
+
+  animation-timing-function: ease;  
+  -webkit-animation-timing-function: ease;  
+
+  visibility: visible !important;   
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.fadeIntwo {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+  
+  animation-duration: 1.5s; 
+  -webkit-animation-duration: 1.5s;
+
+  animation-timing-function: ease;  
+  -webkit-animation-timing-function: ease;  
+
+  visibility: visible !important;   
+}
+
+@-webkit-keyframes fadeIntwo {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIntwo {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.fadeInthree {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+  
+  animation-duration: 2.5s; 
+  -webkit-animation-duration: 2.5s;
+
+  animation-timing-function: ease;  
+  -webkit-animation-timing-function: ease;  
+
+  visibility: visible !important;   
+}
+
+@-webkit-keyframes fadeInthree {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInthree {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeInUp{0%{opacity:0;-webkit-transform:translate3d(0,100%,0);transform:translate3d(0,100%,0);}100%{opacity:1;-webkit-transform:none;transform:none;}}@keyframes fadeInUp{0%{opacity:0;-webkit-transform:translate3d(0,100%,0);transform:translate3d(0,100%,0);}100%{opacity:1;-webkit-transform:none;transform:none;}}.fadeInUp{-webkit-animation-name:fadeInUp;animation-name:fadeInUp;}
+
+/*************************************animate.css ends here ***********************************************/
